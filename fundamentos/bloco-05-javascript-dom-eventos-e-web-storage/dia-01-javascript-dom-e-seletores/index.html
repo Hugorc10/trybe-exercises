@@ -46,13 +46,31 @@
   </main>
   <script>
     let descricao = document.getElementById("descricao").innerText = "Me vejo trabalhando em uma empresa" +
-      "em uma empresa de tecnologia em um cargo importante na empresa.";
+      "de tecnologia em um cargo importante na empresa.";
 
-    document.querySelector(".main-content").style.backgroundColor = 'rgb(76, 164, 109)'
+    document.getElementsByClassName("main-content")[0].style.backgroundColor = 'rgb(76, 164, 109)'
 
     document.getElementsByClassName("center-content")[0].style.backgroundColor = 'white';
 
+    document.getElementsByTagName("h1")[0].innerText = "Exercício 5.1 - JavaScript";
 
+    function transformUppercase() {
+      let tagP = document.getElementsByTagName("p");
+      for (let i = 0; i < tagP.length; i++) {
+        tagP[i].style.textTransform = "uppercase";
+      }
+    }
+
+    function displayContent() {
+      let tagP = document.getElementsByTagName("p");
+      for (let entry of tagP) {
+        console.log(entry.textContent);
+      }
+    }
+
+    transformUppercase();
+
+    displayContent();
     /*
 Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
 - document.getElementById()
@@ -60,10 +78,10 @@ Aqui você vai modificar os elementos já existentes utilizando apenas as funç�
 - document.getElementsByTagName()
 -- Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
 -- Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
-Crie uma função que mude a cor do quadrado vermelho para branco.
-Crie uma função que corrija o texto da tag <h1>.
-Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
-Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+-- Crie uma função que mude a cor do quadrado vermelho para branco.
+-- Crie uma função que corrija o texto da tag <h1>.
+-- Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+-- Crie uma função que exiba o conteúdo de todas as tags <p> no console.
 */
   </script>
 </body>
